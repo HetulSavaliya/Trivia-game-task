@@ -4,18 +4,17 @@ import { useNavigate } from 'react-router-dom'
 import { resetQuiz } from '../store/question/question.slice';
 import { Button } from 'antd';
 
-
 function ResultScreen() {
     const dispatch = useDispatch();
-    const { answers, correctCount, wrongCount} = useSelector(store => store.questions)
     const navigate = useNavigate()
-        const handleRetry = () => {
-          dispatch(resetQuiz());
-          navigate('/');
-        };
+    const { answers, correctCount, wrongCount} = useSelector(store => store.questions)
+  
+  const handleRetry = () => {
+      dispatch(resetQuiz());
+      navigate('/');
+  };
     
   return (
-
      <div className="result-screen">
       <h1 className="result-title">Quiz Results</h1>
       <div >
@@ -35,7 +34,6 @@ function ResultScreen() {
         ))}
       </div>
     </div>
-
   )
 }
 

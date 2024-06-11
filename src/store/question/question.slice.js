@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-
 // Api Calling
 export const GetQuestions = createAsyncThunk(
     'GetQuestionsData',
@@ -34,9 +33,9 @@ export const GetQuestions = createAsyncThunk(
     status: 'idle',
     index: 0, 
     currentQuestion:null,
-     answer: null,
-     answers:[],
-     correctCount: 0,
+    answer: null,
+    answers:[],
+    correctCount: 0,
     wrongCount: 0
 }
 // Create Slice 
@@ -89,7 +88,6 @@ export const questionsSlice = createSlice({
         }).addCase(GetQuestions.rejected, (state)=>{
             state.status = 'failed'
         })
-
     }
 })
 export const {newAnswer, nextQuestion, resetQuiz} = questionsSlice.actions

@@ -11,20 +11,20 @@
     const dispatch = useDispatch();
 
     // Get Question Using APi Calling.
-  React.useEffect(() => {
-    dispatch(GetQuestions());
-  }, []);
+    React.useEffect(() => {
+      dispatch(GetQuestions());
+    }, []);
 
     // Next Question Function
     const handleNext = () => {
-    if (index < questions.length -1) {  
-      dispatch(nextQuestion());
-    } else {
-      navigate('/results');
-    }
-  };
+      if (index < questions.length -1) {  
+        dispatch(nextQuestion());
+      } else {
+        navigate('/results');
+      }
+    };
 
-  const Answer = answer !== null;
+    const Answer = answer !== null;
     
     return (
        <main className="main">
