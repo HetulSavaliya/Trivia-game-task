@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <>
       <header className='header'>
-          <h1>Quiz Game Task</h1>
+          <h1>Quiz Game</h1>
       </header>
       <Outlet/>
     </>
